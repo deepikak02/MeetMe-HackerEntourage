@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('meetme.core.urls',namespace='core')),
+    url(r'', include('meetme.users.urls',namespace='users')),
 ]

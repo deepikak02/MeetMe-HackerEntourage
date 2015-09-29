@@ -54,10 +54,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'meetme.urls'
 
+HOME_PATH = '/Users/hacker/soham/django_apps/meetme/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['meetme/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
