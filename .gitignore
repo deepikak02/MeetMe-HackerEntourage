@@ -1,6 +1,8 @@
 # Logs
 logs
 *.log
+*.sqlite3
+*.idea
 
 # Runtime data
 pids
