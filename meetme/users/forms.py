@@ -16,11 +16,12 @@ class MMUserCreationForm(ModelForm):
         return user
 
 
-    def clean(self):
-        super(MMUserCreationForm, self).clean()
-        if User.objects.filter(username = self.cleaned_data['username']).count() > 0:
-            raise ValidationError('User with that username already exists. Please pick a different username')
-        if User.objects.filter(email = self.cleaned_data['email']).count() > 0:
-            raise ValidationError('User with that email already exists. Please pick a different email')
-        return self.cleaned_data
+class MMUserLoginForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['email','password']
+
+
+
+
 
